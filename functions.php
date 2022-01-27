@@ -7,7 +7,7 @@ function db_conn() {
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     } catch (PDOException $e){
-        echo $e->getMessage();   //デバッグ用
+        echo $e->getMessage();   // エラーメッセージ
         exit;
     }
     return $dbh;
